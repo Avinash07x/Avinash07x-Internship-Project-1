@@ -44,9 +44,9 @@ const SecNav = () => {
   const menuItems = [
     { name: "Hosting", hasDropdown: true },
     { name: "Servers", hasDropdown: true },
-    { name: "Forex Servers", hasDropdown: false },
-    { name: "Proxy Servers", hasDropdown: false },
-    { name: "Bulk Email", hasDropdown: false },
+    { name: "Forex Servers", hasDropdown: false , link: "/forex-servers" },
+    { name: "Proxy Servers", hasDropdown: false , link: "/proxy-servers" },
+    { name: "Bulk Email", hasDropdown: false , link: "/bulk-email" },
     { name: "Google Workspace", hasDropdown: false, link: "/googleworkspace" },
     { name: "Microsoft 365", hasDropdown: false },
     { name: "LICENSE", hasDropdown: false, link: "/license" },
@@ -55,9 +55,9 @@ const SecNav = () => {
 
   const dropdownContent = {
     Hosting: [
-      { name: "Shared Hosting", link: "#" },
-      { name: "Reseller Hosting", link: "#" },
-      { name: "Python", link: "#" },
+      { name: "Shared Hosting", link: "/shared-hosting" },
+      { name: "Reseller Hosting", link: "/reseller-hosting" },
+      { name: "Python", link: "/python-hosting" },
     ],
     Servers: [
       {

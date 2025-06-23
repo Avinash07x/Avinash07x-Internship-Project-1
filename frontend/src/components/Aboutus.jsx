@@ -95,7 +95,6 @@ export default function AboutUs() {
   );
 }
 
-
 // import React, { useState, useEffect } from "react";
 // import { Server, Users, Clock, Smile } from "lucide-react";
 

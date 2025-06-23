@@ -34,7 +34,7 @@ const faqs = [
 ];
 
 export default function Faqsection() {
- const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -126,3 +126,39 @@ function MinusIcon() {
     </svg>
   );
 }
+
+// function PlusIcon() {
+//   return (
+//     <svg
+//       className="w-6 h-6 text-gray-900 group-hover:text-indigo-600"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//     >
+//       <path
+//         d="M6 12H18M12 18V6"
+//         stroke="currentColor"
+//         strokeWidth="1.6"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       ></path>
+//     </svg>
+//   );
+// }
+
+// function MinusIcon() {
+//   return (
+//     <svg
+//       className="w-6 h-6 text-gray-900 group-hover:text-indigo-600"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//     >
+//       <path
+//         d="M6 12H18"
+//         stroke="currentColor"
+//         strokeWidth="1.6"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       ></path>
+//     </svg>
+//   );
+// }

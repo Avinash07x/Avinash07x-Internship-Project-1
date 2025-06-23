@@ -15,22 +15,23 @@ import {
   Youtube,
   Globe,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+
+import { FaWhatsapp } from "react-icons/fa"; 
 
 const Footer = () => {
   const socialMedia = [
     {
-      name: "Facebook",
-      icon: Facebook,
-      color: "hover:text-blue-500",
+      name: "WhatsApp",
+      icon: FaWhatsapp, 
+      color: "hover:text-green-500",
       url: "#",
     },
-    { name: "Twitter", icon: Twitter, color: "hover:text-blue-400", url: "#" },
+    
     {
       name: "Instagram",
       icon: Instagram,
       color: "hover:text-pink-500",
-      url: "https://www.instagram.com/stories/highlights/17887447296269957/",
+      url: "https://www.instagram.com/dckeepers/",
     },
     {
       name: "LinkedIn",
@@ -38,8 +39,7 @@ const Footer = () => {
       color: "hover:text-blue-600",
       url: "#",
     },
-    { name: "YouTube", icon: Youtube, color: "hover:text-red-500", url: "https://www.youtube.com/watch?v=jADTdg-o8i0" },
-    { name: "Website", icon: Globe, color: "hover:text-teal-300", url: "/" },
+    
   ];
 
   const services = [
@@ -65,16 +65,14 @@ const Footer = () => {
             {/* Logo Section */}
             <div className="flex-shrink-0">
               <div className="flex items-center w-40 pt-2 ">
-                <Link to={"/"} target="home">
                 <img
-                  className="p-3 rounded-2xl"
+                  className="bg-gray-100 p-3 rounded-2xl"
                   src={DCKFoot}
                   alt=""
                 />
-                </Link>
               </div>
             </div>
-            <p className="text-sm leading-relaxed opacity-80 mt-5 w-[350px]">
+            <p className="text-sm leading-relaxed opacity-80 mt-5 w-[400px]">
               Complete solution for online businesses including Domain
               Registration, Web Development, Hosting, VPS Server, and more.
               Working 24/7 at your service.
@@ -139,7 +137,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="pr-16">
             <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
-              CONTACT
+              CONTACT US
             </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2 group">
@@ -199,7 +197,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="mb-4">
+          <div className="mb-4 pr-12">
             <h4 className="font-medium mb-3 text-sm">Follow Us</h4>
             <div className="flex gap-3 flex-wrap">
               {socialMedia.map((social, index) => {

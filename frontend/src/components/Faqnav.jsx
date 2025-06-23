@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import React from "react";
+import { ChevronUp } from "lucide-react";
+
 
 export default function Faqnav() {
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
+  
   const navItems = [
     { name: "Home", targetId: "home" },
     { name: "Offers", targetId: "offers" },
@@ -12,27 +11,7 @@ export default function Faqnav() {
     { name: "FAQ", targetId: "faq" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsScrollingDown(true);
-      } else {
-        setIsScrollingDown(false);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
-
-  const handleNavClick = (id) => {
+  const handleScroll = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -40,29 +19,29 @@ export default function Faqnav() {
   };
   
   return (
-    <div className="sticky top-11 z-50 bg-white/20 backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="container mx-auto px-1 sm:px-1 lg:px-1 py-1">
-        <div className="bg-gray-200/80 backdrop-blur-sm rounded-full py-1 px-1 flex items-center max-w-fit mx-auto shadow-sm">
-          {/* Dynamic Arrow Icon */}
-          <div className="flex-shrink-0 mr-2">
-            {isScrollingDown ? (
-              <ChevronDown className="w-5 h-5 text-gray-700 transition-transform duration-300" />
-            ) : (
-              <ChevronUp className="w-5 h-5 text-gray-700 transition-transform duration-300" />
-            )}
-          </div>
+    <div className=" bg-white py-2  sticky z-40 top-11 bg-white/30 backdrop-blur-md shadow-md flex items-center h-10" >
+      {/* Sticky Navigation Bar */}
+      <div className=" transition-all duration-300 ease-in-out  ">
+        <div className="container px-20 sm:pr-0 md:pr-6 lg:pr-96 sticky z-40">
+          <div className="bg-gray-300 rounded-full py-[3px] px-5 flex items-center overflow-x-auto ">
 
-          {/* Navigation Items */}
-          <div className="flex items-center space-x-3 overflow-x-auto scrollbar-hide">
-            {navItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleNavClick(item.targetId)}
-                className="text-gray-800 font-medium text-sm hover:text-gray-600 transition-all duration-200 px-4 py-1 rounded-full hover:bg-white/30 whitespace-nowrap"
-              >
-                {item.name}
-              </button>
-            ))}
+            {/* Upward Arrow Icon */}
+            <div className="flex-shrink-0 mr-3">
+              <ChevronUp className="w-5 text-gray-800" />
+            </div>
+
+            {/* Navigation Items */}
+            <div className="flex items-center space-x-6 whitespace-nowrap">
+              {navItems.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleScroll(item.targetId)}
+                  className="text-gray-900 font-medium text-[15px] hover:text-gray-700 transition-colors duration-200 px-2 py-1"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
