@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function HostingPlans() {
+export default function Offers() {
   const [selectedOS, setSelectedOS] = useState('linux');
 
   const plans = {
