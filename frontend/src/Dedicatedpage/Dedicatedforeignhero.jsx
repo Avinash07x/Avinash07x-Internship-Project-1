@@ -1,10 +1,9 @@
 import React from 'react'
 import Hero11 from "../assets/10.png"
+import { ArrowRight } from "lucide-react";
 
 const Dedicatedforeignhero = () => {
-    const Items = [
-        { name: "See All Plans", targetId: "foreign" },
-    ];
+
 
     const handleScroll = (id) => {
         const element = document.getElementById(id);
@@ -14,7 +13,7 @@ const Dedicatedforeignhero = () => {
     };
     return (
         <section
-            className="relative bg-white from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden"
+            className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden"
         >
             <div className="container mx-auto px-6 h-full relative">
                 {/* Carousel Container */}
@@ -32,20 +31,15 @@ const Dedicatedforeignhero = () => {
                                 <p className="text-sm lg:text-lg leading-relaxed text-[#3b3f5c] max-w-lg">
                                     Expand without limits, secure your global success with our top-tier dedicated servers, and seize the opportunity to save 20% on annual subscriptions for a limited time.
                                 </p>
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    {Items.map((item, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => handleScroll(item.targetId)}
-                                            className="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer"
-                                        >
-                                            <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                            <span className="relative flex items-center gap-2">
-                                                {item.name}
-                                            </span>
-
-                                        </button>
-                                    ))}
+                                {/* CTA Buttons */}
+                                <div className="pt-0">
+                                    <button
+                                        className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
+                                        aria-label="View all hosting plans"
+                                    >
+                                        <span>See All Plans</span>
+                                        <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                    </button>
                                 </div>
                             </div>
 
@@ -55,7 +49,7 @@ const Dedicatedforeignhero = () => {
                                 <div className="w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px]  ">
                                     <img
                                         src={Hero11}
-                                        className="max-w-2xl h-auto object-cover lg:pl-6 xl:pl-44 "
+                                        className="max-w-2xl h-auto bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] object-cover lg:pl-6 xl:pl-44 "
                                     />
                                 </div>
                             </div>
@@ -67,4 +61,4 @@ const Dedicatedforeignhero = () => {
     )
 }
 
-export default Dedicatedforeignhero
+export default Dedicatedforeignhero;

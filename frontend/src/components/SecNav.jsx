@@ -48,7 +48,7 @@ const SecNav = () => {
     { name: "Proxy Servers", hasDropdown: false , link: "/proxy-servers" },
     { name: "Bulk Email", hasDropdown: false , link: "/bulk-email" },
     { name: "Google Workspace", hasDropdown: false, link: "/googleworkspace" },
-    { name: "Microsoft 365", hasDropdown: false },
+    { name: "Microsoft 365", hasDropdown: false, link: "/Microsoft365" },
     { name: "LICENSE", hasDropdown: false, link: "/license" },
     { name: "About us", hasDropdown: false, link: "/about" },
   ];

@@ -28,28 +28,32 @@ export default function Offers() {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Most Popular Hosting Plans</h1>
           <p className="text-lg text-gray-600 mb-8">Cheap and best Server Hosting provider in India</p>
           
-          {/* OS Toggle */}
-          <div className="inline-flex bg-white rounded-full p-1 shadow-lg border">
-            <button
-              onClick={() => setSelectedOS('linux')}
-              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedOS === 'linux'
-                  ? 'bg-blue-600 text-white shadow-md transform scale-105'
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
-            >
-              Linux
-            </button>
-            <button
-              onClick={() => setSelectedOS('windows')}
-              className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedOS === 'windows'
-                  ? 'bg-blue-600 text-white shadow-md transform scale-105'
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
-            >
-              Windows
-            </button>
+          {/* OS Selection Toggle */}
+          <div className="flex justify-center mb-8">
+            <div className="bg-gray-100 rounded-full p-1 shadow-lg">
+              <div className="flex">
+                <button
+                  onClick={() => setSelectedOS("linux")}
+                  className={`flex items-center gap-2 px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                    selectedOS === "linux"
+                      ? "bg-white text-gray-700 shadow-md"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                >
+                  Linux
+                </button>
+                <button
+                  onClick={() => setSelectedOS("windows")}
+                  className={`flex items-center gap-2 px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                    selectedOS === "windows"
+                      ? "bg-blue-500 text-white shadow-md"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                >
+                  Windows
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -12,14 +12,17 @@ import Vpsindia from "./pages/Vpsindia.jsx";
 import Vpsforeign from "./pages/Vpsforeign.jsx"
 import Cloudindia from "./pages/Cloudindia.jsx";
 import Cloudforeign from "./pages/Cloudforeign.jsx";
-import Googleworkspace from "./pages/Googleworkspace.jsx";
-import License from "./pages/License.jsx";
+import Herolicense from "./License/Herolicense.jsx";
 import About from "./pages/About.jsx";
 import SharedHostingpage from "./Products/SharedHostingpage.jsx";
 import ResellerHostingPage from "./ResellerHosting/ResellerHosting.jsx";
 import PythonHostingPage from "./PythonHosting/PythonHosting.jsx";
 import ForexHosting from "./ForexHosting/ForexHosting.jsx";
 import BulkMail from "./BulkMail/BulkMail.jsx";
+import ProxyHome from "./ProxyServer/ProxyHome.jsx";
+import GoogleHome from "./Googleworkspace/GoogleHome.jsx";
+import M365 from "./Microsoft/M365.jsx";
+
 
 
 const App = () => {
@@ -42,10 +45,11 @@ const App = () => {
           <Route path="/vps/foreign" element={<Vpsforeign />} />
           <Route path="/cloud/india" element={<Cloudindia />} />
           <Route path="/cloud/foreign" element={<Cloudforeign />} />
-          {/* <Route path="/proxy-servers" element={<ProxyServers />} /> */}
+          <Route path="/proxy-servers" element={<ProxyHome />} />
           <Route path="/bulk-email" element={<BulkMail />} />
-          <Route path="/googleworkspace" element={<Googleworkspace />} />
-          <Route path="/license" element={<License />} />
+          <Route path="/googleworkspace" element={<GoogleHome />} />
+          <Route path="/Microsoft365" element={<M365 />} />
+          <Route path="/license" element={<Herolicense />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
