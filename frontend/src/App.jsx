@@ -22,6 +22,7 @@ import BulkMail from "./BulkMail/BulkMail.jsx";
 import ProxyHome from "./ProxyServer/ProxyHome.jsx";
 import GoogleHome from "./Googleworkspace/GoogleHome.jsx";
 import M365 from "./Microsoft/M365.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
 
 
 
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/Microsoft365" element={<M365 />} />
           <Route path="/license" element={<Herolicense />} />
           <Route path="/about" element={<About />} />
+          <Route path="/Contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
